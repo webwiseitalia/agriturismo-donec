@@ -110,6 +110,10 @@ export default function Ristorante() {
               <img
                 src={ristoranteSala}
                 alt="Sala ristorante"
+                title="Sala ristorante con vista sulle Alpi - Agriturismo Donec"
+                loading="lazy"
+                width={1200}
+                height={900}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -129,6 +133,10 @@ export default function Ristorante() {
               <img
                 src={vinoRosso}
                 alt="Vino della Valcamonica"
+                title="Selezione vini locali della Valcamonica - Agriturismo Donec"
+                loading="lazy"
+                width={800}
+                height={1067}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -162,6 +170,10 @@ export default function Ristorante() {
                 <img
                   src={piatto.img}
                   alt={piatto.name}
+                  title={`${piatto.name} ${piatto.desc} - Cucina Agriturismo Donec`}
+                  loading="lazy"
+                  width={800}
+                  height={1000}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>

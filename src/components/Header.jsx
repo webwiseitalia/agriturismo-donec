@@ -44,6 +44,10 @@ export default function Header() {
             <img
               src={logo}
               alt="Donec"
+              title="Agriturismo Donec - Logo"
+              loading="eager"
+              width={80}
+              height={64}
               className={`transition-all duration-500 ${
                 isScrolled ? 'h-10 invert' : 'h-14 md:h-16'
               }`}

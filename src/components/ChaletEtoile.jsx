@@ -128,6 +128,10 @@ export default function ChaletEtoile() {
             <img
               src={chaletVista}
               alt="Vista dallo Chalet"
+              title="Vista panoramica dallo Chalet Étoile"
+              loading="lazy"
+              width={1600}
+              height={1000}
               className="w-full h-full object-cover"
             />
           </div>
@@ -136,6 +140,10 @@ export default function ChaletEtoile() {
             <img
               src={chaletInterno}
               alt="Interno Chalet"
+              title="Interno lussuoso dello Chalet Étoile"
+              loading="lazy"
+              width={800}
+              height={1067}
               className="w-full h-full object-cover"
             />
           </div>
@@ -144,6 +152,10 @@ export default function ChaletEtoile() {
             <img
               src={idromassaggio}
               alt="Idromassaggio"
+              title="Idromassaggio esterno con vista panoramica"
+              loading="lazy"
+              width={600}
+              height={600}
               className="w-full h-full object-cover"
             />
           </div>
@@ -152,6 +164,10 @@ export default function ChaletEtoile() {
             <img
               src={sauna}
               alt="Sauna panoramica"
+              title="Sauna vetrata con vista sulle montagne"
+              loading="lazy"
+              width={800}
+              height={1000}
               className="w-full h-full object-cover"
             />
           </div>
@@ -160,6 +176,10 @@ export default function ChaletEtoile() {
             <img
               src={saunaAcc}
               alt="Dettagli sauna"
+              title="Accessori e dettagli della sauna"
+              loading="lazy"
+              width={600}
+              height={800}
               className="w-full h-full object-cover"
             />
           </div>

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import logo from '../assets/foto/foto-28.webp'
@@ -93,6 +94,10 @@ export default function Footer() {
               <img
                 src={logo}
                 alt="Donec"
+                title="Agriturismo Donec - Logo"
+                loading="lazy"
+                width={80}
+                height={96}
                 className="h-full w-auto object-contain opacity-70"
               />
             </div>
@@ -212,12 +217,12 @@ export default function Footer() {
               <span>100% Green Energy</span>
             </div>
             <div className="flex items-center gap-6">
-              <a href="#" className="text-fluid-xs text-[#F5F0E8]/30 hover:text-[#F5F0E8]/60 transition-colors">
+              <Link to="/privacy-policy" className="text-fluid-xs text-[#F5F0E8]/30 hover:text-[#F5F0E8]/60 transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-fluid-xs text-[#F5F0E8]/30 hover:text-[#F5F0E8]/60 transition-colors">
+              </Link>
+              <Link to="/cookie-policy" className="text-fluid-xs text-[#F5F0E8]/30 hover:text-[#F5F0E8]/60 transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
               <a
                 href="#home"
                 className="w-8 h-8 border border-[#F5F0E8]/20 rounded-full flex items-center justify-center hover:border-[#C4A35A] hover:text-[#C4A35A] transition-colors duration-300"

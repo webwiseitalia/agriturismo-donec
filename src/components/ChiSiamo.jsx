@@ -160,6 +160,10 @@ export default function ChiSiamo() {
             ref={heroImageRef}
             src={cavalliImg}
             alt="I cavalli"
+            title="I cavalli dell'Agriturismo Donec"
+            loading="lazy"
+            width={1920}
+            height={1080}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-[#0a0908]/40" />
@@ -226,6 +230,10 @@ export default function ChiSiamo() {
                   <img
                     src={panoramaImg}
                     alt="Panorama"
+                    title="Vista panoramica delle Alpi"
+                    loading="lazy"
+                    width={800}
+                    height={1067}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute -bottom-4 -right-4 w-full h-full border border-[#C4A35A]/20 -z-10" />
@@ -239,13 +247,17 @@ export default function ChiSiamo() {
                   <img
                     src={colazioneImg}
                     alt="Colazione"
+                    title="Colazione gourmet in agriturismo"
+                    loading="lazy"
+                    width={600}
+                    height={600}
                     className="w-full h-full object-cover"
                   />
                 </div>
 
                 {/* Logo watermark */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 z-0">
-                  <img src={logoImg} alt="" className="w-48 h-48 invert" />
+                  <img src={logoImg} alt="" loading="lazy" width={192} height={192} className="w-48 h-48 invert" />
                 </div>
               </div>
             </div>

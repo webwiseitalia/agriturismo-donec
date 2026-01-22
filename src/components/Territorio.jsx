@@ -128,6 +128,10 @@ export default function Territorio() {
           <img
             src={stradaMontagna}
             alt="Strada alpina"
+            title="Strada panoramica verso il Passo del Tonale - Pontedilegno"
+            loading="lazy"
+            width={1920}
+            height={1080}
             className="w-full h-full object-cover"
           />
         </div>
@@ -202,6 +206,10 @@ export default function Territorio() {
               <img
                 src={panoramaInverno}
                 alt="Inverno a Ponte di Legno"
+                title="Panorama invernale delle piste da sci di Pontedilegno-Tonale"
+                loading="lazy"
+                width={1200}
+                height={900}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -288,6 +296,10 @@ export default function Territorio() {
               <img
                 src={panoramaEstate}
                 alt="Estate in valle"
+                title="Panorama estivo dei sentieri alpini in Valcamonica"
+                loading="lazy"
+                width={1200}
+                height={900}
                 className="w-full h-full object-cover"
               />
             </div>

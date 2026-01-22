@@ -154,6 +154,10 @@ export default function Hero() {
             <img
               src={heroImage}
               alt="Vista Chalet Étoile"
+              title="Vista panoramica dello Chalet Étoile - Agriturismo Donec"
+              loading="eager"
+              width={1200}
+              height={1600}
               className="w-full h-full object-cover"
             />
           </div>
@@ -165,6 +169,10 @@ export default function Hero() {
             <img
               src={colazioneImg}
               alt="Colazione in camera"
+              title="Colazione servita in camera - Agriturismo Donec"
+              loading="eager"
+              width={400}
+              height={500}
               className="w-full h-full object-cover"
             />
             <div className="absolute -bottom-4 -right-4 bg-[#1a1714] text-[#F5F0E8] px-4 py-2">

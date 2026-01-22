@@ -269,6 +269,10 @@ export default function Camere() {
                   <img
                     src={camera.image}
                     alt={camera.name}
+                    title={`Camera ${camera.name} - Agriturismo Donec`}
+                    loading="lazy"
+                    width={1920}
+                    height={1080}
                     className="room-image w-full h-full object-cover will-change-transform"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-[#1a1714] via-[#1a1714]/50 to-transparent" />
@@ -342,6 +346,10 @@ export default function Camere() {
                           <img
                             src={bagno}
                             alt="Dettaglio bagno"
+                            title="Bagno in pietra naturale - Agriturismo Donec"
+                            loading="lazy"
+                            width={400}
+                            height={533}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -357,6 +365,10 @@ export default function Camere() {
                           <img
                             src={dettaglio}
                             alt="Dettaglio"
+                            title="Dettagli di design - Agriturismo Donec"
+                            loading="lazy"
+                            width={400}
+                            height={400}
                             className="w-full h-full object-cover"
                           />
                         </div>

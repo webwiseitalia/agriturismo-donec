@@ -1,24 +1,34 @@
 import { useEffect, useRef } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Lenis from '@studio-freight/lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import Header from './components/Header'
-import Hero from './components/Hero'
-import ChiSiamo from './components/ChiSiamo'
-import Camere from './components/Camere'
-import ChaletEtoile from './components/ChaletEtoile'
-import Ristorante from './components/Ristorante'
-import Territorio from './components/Territorio'
-import Recensioni from './components/Recensioni'
-import Footer from './components/Footer'
+import HomePage from './pages/HomePage'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import CookiePolicy from './pages/CookiePolicy'
+import CookieBanner from './components/CookieBanner'
 
 gsap.registerPlugin(ScrollTrigger)
 
-function App() {
+// Componente wrapper per gestire Lenis e scroll
+function AppContent() {
   const lenisRef = useRef(null)
+  const location = useLocation()
 
   useEffect(() => {
+    // Non usare Lenis nelle pagine policy per scroll nativo
+    const isPolicyPage = location.pathname === '/privacy-policy' || location.pathname === '/cookie-policy'
+
+    if (isPolicyPage) {
+      // Distruggi Lenis se esiste
+      if (lenisRef.current) {
+        lenisRef.current.destroy()
+        lenisRef.current = null
+      }
+      return
+    }
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -69,26 +79,26 @@ function App() {
         anchor.removeEventListener('click', handleAnchorClick)
       })
     }
-  }, [])
+  }, [location.pathname])
 
   return (
     <div className="relative">
       <div className="noise" />
-
-      <Header />
-
-      <main>
-        <Hero />
-        <ChiSiamo />
-        <Camere />
-        <ChaletEtoile />
-        <Ristorante />
-        <Territorio />
-        <Recensioni />
-      </main>
-
-      <Footer />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/cookie-policy" element={<CookiePolicy />} />
+      </Routes>
+      <CookieBanner />
     </div>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
   )
 }
 

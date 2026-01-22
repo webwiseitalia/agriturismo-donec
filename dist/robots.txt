@@ -1,0 +1,12 @@
+# Robots.txt - Agriturismo Donec
+# https://www.agriturismodonec.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.agriturismodonec.com/sitemap.xml
+
+# Blocca cartelle non necessarie per i motori di ricerca
+Disallow: /src/
+Disallow: /node_modules/
