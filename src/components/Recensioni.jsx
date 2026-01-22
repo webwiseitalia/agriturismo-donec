@@ -46,7 +46,7 @@ export default function Recensioni() {
             opacity: 1,
             y: 0,
             rotate: 0,
-            duration: 1,
+            duration: 0.6,
             ease: 'power3.out',
             scrollTrigger: {
               trigger: review,
@@ -62,7 +62,7 @@ export default function Recensioni() {
         {
           scale: 1,
           opacity: 1,
-          duration: 1.2,
+          duration: 0.7,
           ease: 'elastic.out(1, 0.5)',
           scrollTrigger: {
             trigger: counterRef.current,

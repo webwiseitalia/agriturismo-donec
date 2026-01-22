@@ -18,14 +18,14 @@ export default function Footer() {
           {
             y: 0,
             opacity: 1,
-            duration: 0.8,
+            duration: 0.5,
             ease: 'power3.out',
             scrollTrigger: {
               trigger: el,
               start: 'top 92%',
               toggleActions: 'play none none reverse'
             },
-            delay: i * 0.08
+            delay: i * 0.05
           }
         )
       })

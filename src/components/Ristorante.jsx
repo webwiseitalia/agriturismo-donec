@@ -25,7 +25,7 @@ export default function Ristorante() {
           {
             x: 0,
             opacity: 1,
-            duration: 1.2,
+            duration: 0.7,
             ease: 'power3.out',
             scrollTrigger: {
               trigger: line,

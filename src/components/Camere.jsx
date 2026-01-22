@@ -72,9 +72,9 @@ export default function Camere() {
           {
             y: 0,
             opacity: 1,
-            duration: 1,
+            duration: 0.6,
             ease: 'power4.out',
-            stagger: 0.03,
+            stagger: 0.02,
             scrollTrigger: {
               trigger: headerRef.current,
               start: 'top 80%',
@@ -124,7 +124,7 @@ export default function Camere() {
             {
               opacity: 1,
               y: 0,
-              duration: 0.8,
+              duration: 0.5,
               ease: 'power2.out',
               scrollTrigger: {
                 trigger: slide,

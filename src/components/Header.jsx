@@ -16,8 +16,8 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll)
 
     gsap.fromTo(logoRef.current,
-      { opacity: 0, x: -30 },
-      { opacity: 1, x: 0, duration: 1.2, ease: 'power3.out', delay: 0.5 }
+      { opacity: 0, x: -20 },
+      { opacity: 1, x: 0, duration: 0.6, ease: 'power3.out', delay: 0.2 }
     )
 
     return () => window.removeEventListener('scroll', handleScroll)
@@ -55,9 +55,9 @@ export default function Header() {
               <motion.a
                 key={item.label}
                 href={item.href}
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: -15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 + i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ delay: 0.3 + i * 0.05, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 className={`text-fluid-sm font-body tracking-wide link-hover ${
                   isScrolled ? 'text-white' : 'text-[#1a1714]'
                 }`}
@@ -72,7 +72,7 @@ export default function Header() {
               href="#contatti"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.2, duration: 0.8 }}
+              transition={{ delay: 0.5, duration: 0.4 }}
               className={`hidden md:block text-fluid-sm font-body tracking-wide ${
                 isScrolled ? 'text-white' : 'text-[#1a1714]'
               }`}
@@ -99,7 +99,7 @@ export default function Header() {
             initial={{ clipPath: 'circle(0% at calc(100% - 3rem) 3rem)' }}
             animate={{ clipPath: 'circle(150% at calc(100% - 3rem) 3rem)' }}
             exit={{ clipPath: 'circle(0% at calc(100% - 3rem) 3rem)' }}
-            transition={{ duration: 0.8, ease: [0.77, 0, 0.175, 1] }}
+            transition={{ duration: 0.5, ease: [0.77, 0, 0.175, 1] }}
             className="fixed inset-0 z-[100] bg-[#1a1714]"
           >
             <button
@@ -119,11 +119,11 @@ export default function Header() {
                     key={item.label}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    initial={{ opacity: 0, x: -60 }}
+                    initial={{ opacity: 0, x: -40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{
-                      delay: 0.3 + i * 0.08,
-                      duration: 0.7,
+                      delay: 0.15 + i * 0.05,
+                      duration: 0.4,
                       ease: [0.22, 1, 0.36, 1]
                     }}
                     className="block text-fluid-4xl font-display text-[#F5F0E8] hover:text-[#C4A35A] transition-colors duration-300 leading-[1.1] py-2"
@@ -136,7 +136,7 @@ export default function Header() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1, duration: 0.6 }}
+                transition={{ delay: 0.4, duration: 0.4 }}
                 className="flex flex-col md:flex-row md:justify-between md:items-end gap-8 text-[#F5F0E8]/60 text-fluid-sm"
               >
                 <div>

@@ -26,9 +26,9 @@ export default function Territorio() {
           {
             y: 0,
             opacity: 1,
-            duration: 1,
+            duration: 0.6,
             ease: 'power4.out',
-            stagger: 0.02,
+            stagger: 0.015,
             scrollTrigger: {
               trigger: titleRef.current,
               start: 'top 85%',
@@ -45,7 +45,7 @@ export default function Territorio() {
           trigger: parallaxRef.current,
           start: 'top bottom',
           end: 'bottom top',
-          scrub: 1.5
+          scrub: 1
         }
       })
 
@@ -57,14 +57,14 @@ export default function Territorio() {
           {
             y: 0,
             opacity: 1,
-            duration: 0.8,
+            duration: 0.5,
             ease: 'power3.out',
             scrollTrigger: {
               trigger: item,
               start: 'top 90%',
               toggleActions: 'play none none reverse'
             },
-            delay: i * 0.1
+            delay: i * 0.06
           }
         )
       })
@@ -81,7 +81,7 @@ export default function Territorio() {
           {
             scale: 1,
             opacity: 1,
-            duration: 1.2,
+            duration: 0.7,
             ease: 'power2.out',
             scrollTrigger: {
               trigger: block,
@@ -96,14 +96,14 @@ export default function Territorio() {
           {
             y: 0,
             opacity: 1,
-            duration: 1,
+            duration: 0.6,
             ease: 'power3.out',
             scrollTrigger: {
               trigger: content,
               start: 'top 85%',
               toggleActions: 'play none none reverse'
             },
-            delay: 0.2
+            delay: 0.1
           }
         )
       })

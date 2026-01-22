@@ -52,17 +52,17 @@ export default function ChiSiamo() {
       // Title animation
       const titleSplit = new SplitType(titleRef.current, { types: 'chars' })
       gsap.fromTo(titleSplit.chars,
-        { y: 120, opacity: 0, rotateX: -90 },
+        { y: 60, opacity: 0, rotateX: -45 },
         {
           y: 0,
           opacity: 1,
           rotateX: 0,
-          duration: 1.2,
+          duration: 0.6,
           ease: 'power4.out',
-          stagger: { amount: 0.8, from: 'start' },
+          stagger: { amount: 0.4, from: 'start' },
           scrollTrigger: {
             trigger: titleRef.current,
-            start: 'top 75%',
+            start: 'top 80%',
             toggleActions: 'play none none reverse'
           }
         }
@@ -70,24 +70,24 @@ export default function ChiSiamo() {
 
       // Floating images parallax
       gsap.to(floatingImg1Ref.current, {
-        y: -80,
-        rotation: -5,
+        y: -60,
+        rotation: -3,
         scrollTrigger: {
           trigger: floatingImg1Ref.current,
           start: 'top bottom',
           end: 'bottom top',
-          scrub: 2
+          scrub: 1
         }
       })
 
       gsap.to(floatingImg2Ref.current, {
-        y: 60,
-        rotation: 3,
+        y: 40,
+        rotation: 2,
         scrollTrigger: {
           trigger: floatingImg2Ref.current,
           start: 'top bottom',
           end: 'bottom top',
-          scrub: 1.5
+          scrub: 1
         }
       })
 
@@ -101,12 +101,12 @@ export default function ChiSiamo() {
           { innerText: 0 },
           {
             innerText: target,
-            duration: 2,
+            duration: 1.2,
             ease: 'power2.out',
             snap: { innerText: 1 },
             scrollTrigger: {
               trigger: counter,
-              start: 'top 85%',
+              start: 'top 88%',
               toggleActions: 'play none none reverse'
             },
             onUpdate: function() {
@@ -121,7 +121,7 @@ export default function ChiSiamo() {
       blocks?.forEach((block, i) => {
         gsap.fromTo(block,
           {
-            y: 100,
+            y: 50,
             opacity: 0,
             clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'
           },
@@ -129,14 +129,14 @@ export default function ChiSiamo() {
             y: 0,
             opacity: 1,
             clipPath: 'polygon(0 0%, 100% 0%, 100% 100%, 0 100%)',
-            duration: 1,
+            duration: 0.6,
             ease: 'power3.out',
             scrollTrigger: {
               trigger: block,
-              start: 'top 85%',
+              start: 'top 88%',
               toggleActions: 'play none none reverse'
             },
-            delay: i * 0.15
+            delay: i * 0.08
           }
         )
       })

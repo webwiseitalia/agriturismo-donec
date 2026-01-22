@@ -26,9 +26,9 @@ export default function ChaletEtoile() {
         y: 0,
         opacity: 1,
         rotate: 0,
-        duration: 1.2,
+        duration: 0.7,
         ease: 'power4.out',
-        stagger: { amount: 0.8, from: 'random' },
+        stagger: { amount: 0.4, from: 'random' },
         scrollTrigger: {
           trigger: titleRef.current,
           start: 'top 80%',
@@ -57,14 +57,14 @@ export default function ChaletEtoile() {
           {
             clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
             scale: 1,
-            duration: 1.5,
+            duration: 0.8,
             ease: 'power4.inOut',
             scrollTrigger: {
               trigger: img,
               start: 'top 85%',
               toggleActions: 'play none none reverse'
             },
-            delay: i * 0.15
+            delay: i * 0.08
           }
         )
       })

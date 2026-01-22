@@ -21,45 +21,45 @@ export default function Hero() {
       const titleSplit = new SplitType(titleRef.current, { types: 'chars' })
       const subtitleSplit = new SplitType(subtitleRef.current, { types: 'chars' })
 
-      gsap.set(titleSplit.chars, { y: 120, opacity: 0, rotateX: -40 })
-      gsap.set(subtitleSplit.chars, { y: 40, opacity: 0 })
+      gsap.set(titleSplit.chars, { y: 80, opacity: 0, rotateX: -30 })
+      gsap.set(subtitleSplit.chars, { y: 30, opacity: 0 })
 
-      const tl = gsap.timeline({ delay: 0.8 })
+      const tl = gsap.timeline({ delay: 0.3 })
 
       tl.to(titleSplit.chars, {
         y: 0,
         opacity: 1,
         rotateX: 0,
-        duration: 1.2,
+        duration: 0.7,
         ease: 'power4.out',
-        stagger: { amount: 0.6, from: 'start' }
+        stagger: { amount: 0.3, from: 'start' }
       })
       .to(subtitleSplit.chars, {
         y: 0,
         opacity: 1,
-        duration: 0.8,
+        duration: 0.5,
         ease: 'power3.out',
-        stagger: { amount: 0.4 }
-      }, '-=0.6')
+        stagger: { amount: 0.2 }
+      }, '-=0.4')
       .fromTo(claimRef.current,
-        { y: 60, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: 'power3.out' },
-        '-=0.4'
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' },
+        '-=0.3'
       )
       .fromTo(imageRef.current,
         { clipPath: 'polygon(0 0, 0 0, 0 100%, 0 100%)' },
-        { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', duration: 1.4, ease: 'power4.inOut' },
-        '-=1.2'
+        { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', duration: 0.8, ease: 'power4.inOut' },
+        '-=0.6'
       )
       .fromTo(secondImageRef.current,
-        { y: 100, opacity: 0, scale: 1.1 },
-        { y: 0, opacity: 1, scale: 1, duration: 1.2, ease: 'power3.out' },
-        '-=0.8'
+        { y: 60, opacity: 0, scale: 1.05 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: 'power3.out' },
+        '-=0.5'
       )
       .fromTo(statsRef.current.children,
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6, stagger: 0.15, ease: 'power2.out' },
-        '-=0.6'
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, stagger: 0.08, ease: 'power2.out' },
+        '-=0.4'
       )
 
       gsap.to(imageRef.current, {
